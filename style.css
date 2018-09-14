@@ -2,6 +2,18 @@ body {
     margin: 0;
     background-color: black;
   } 
+  body {
+    margin: 0;
+    background-color: black;
+  }
+  
+  .star {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    background-color: white;
+  }
+  
   /* Set the animation, color, size and hide the text */
   .intro {
       position: absolute;
@@ -27,6 +39,39 @@ body {
       }
       100% {
           opacity: 0;
+      }
+  }
+  
+  /* Set the animation & hide the logo */
+  .logo {    
+      position: absolute;
+      top: 20%;
+      left: 45%;
+      z-index: 1;
+      margin: auto;
+      animation: logo 9s ease-out 9s;
+      opacity: 0;
+  }
+  
+  .logo svg {
+      width: inherit;
+  }
+  
+  /* Scale the logo down and maintain it centered */
+  @keyframes logo {
+      0% {
+          width: 18em;        
+          transform: scale(2.75);
+          opacity: 1;
+      }
+      50% {
+          opacity: 1;
+          width: 18em;      
+      }
+      100% {
+          opacity: 0;
+          transform: scale(0.1);
+          width: 18em;
       }
   }
   
@@ -62,7 +107,7 @@ body {
   
   /* Set the scrolling animation and position it */
   #content {
-    animation: scroll 50s linear 6s;
+    animation: scroll 100s linear 16s;
     position: absolute;
     top: 100%;
   }
